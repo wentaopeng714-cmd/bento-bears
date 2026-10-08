@@ -1,0 +1,421 @@
+/* Five independently composed start screens, sharing only the input IDs. */
+#menu.start-screen{position:absolute;inset:78px max(24px,calc(50% - 530px)) 18px;max-width:none;margin:0;padding:0;overflow-y:auto;display:grid;grid-template-columns:1fr;gap:0;align-content:start;isolation:isolate}
+.start-screen h1{font-size:48px;line-height:.98;letter-spacing:-2px;font-weight:900;margin:8px 0}
+.start-screen header>p{font-size:13px;line-height:1.4;color:#58657c}
+.start-screen .kicker{font-size:9px;letter-spacing:1.5px;font-weight:900}
+.start-screen .menu-art{position:relative;margin:0;min-height:0;max-height:none;flex:none;box-shadow:none;border:0;background:transparent;border-radius:0;overflow:hidden}
+.start-screen .art-genre{display:none}
+.start-screen .art-caption{bottom:13px;left:18px;right:18px;font-size:8px;letter-spacing:.8px;justify-content:center}
+.start-screen .mission{margin:0;padding:0;border:0}
+.start-screen .mission h2{font-size:24px;line-height:1.1;margin:6px 0;letter-spacing:-.7px}
+.start-screen .mission p{font-size:12px;line-height:1.45;color:#58657c}
+.start-screen .best-stars{min-height:0;font-size:9px;margin-top:8px}
+.start-screen .level-selector{margin:0;gap:12px}
+.start-screen .selected-level{min-width:132px;padding:8px 14px;border:0;border-radius:16px;background:transparent;box-shadow:none}
+.start-screen .selected-level strong{font-size:26px;line-height:1.1}
+.start-screen .selected-level>span{font-size:8px}
+.start-screen .selected-level small{font-size:7px;margin-top:4px}
+.start-screen .round-button{width:44px;height:44px;min-width:44px;box-shadow:none}
+.start-screen .primary{min-height:54px;font-size:13px;letter-spacing:.8px}
+.start-footer{display:flex;align-items:flex-start;justify-content:center;gap:22px;padding:14px 10px 0;grid-column:1/-1;font-size:9px}
+.start-footer .text-link{font-size:8px;padding:0;min-height:44px;display:grid;place-items:center}
+.start-help{max-width:350px}
+.start-help summary{min-height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;letter-spacing:.8px}
+.start-help .help{font-size:11px;line-height:1.55;margin:0 0 12px}
+
+/* Restaurant window + perforated order receipt. */
+#menu.bento-menu{grid-template-columns:1.2fr .8fr;column-gap:38px}
+.bento-brand{grid-column:1/-1;position:relative;border-bottom:2px solid #243450;padding:0 130px 16px 0;margin-bottom:19px}
+.bento-brand h1{color:#e85238}
+.open-stamp{position:absolute;right:10px;top:3px;width:89px;height:89px;border:2px solid #e85238;border-radius:50%;color:#d3442e;display:grid;place-content:center;text-align:center;font-size:10px;font-weight:900;line-height:1.4;transform:rotate(12deg)}
+.bento-display{position:relative;background:repeating-linear-gradient(90deg,#ff765b 0 27px,#fff1ce 27px 54px);padding:17px;border-radius:28px 28px 10px 10px;align-self:start;margin-top:10px}
+.bento-display .kitchen-window{height:320px;border-radius:20px;background:#ffd8bb}
+.restaurant-sign{position:absolute;left:45px;right:45px;bottom:3px;background:#e65035;color:#fff9df;border:3px solid #fff1ce;text-align:center;padding:10px 5px;font-size:9px;font-weight:900;letter-spacing:1.3px;border-radius:8px;box-shadow:0 4px 0 #862f31}
+.receipt{background:#fffcef;padding:24px 24px 20px;box-shadow:7px 9px 0 #e8cbaa;position:relative;align-self:start;transform:rotate(1deg)}
+.receipt:before,.receipt:after{content:'';position:absolute;height:9px;left:0;right:0;background:radial-gradient(circle at 5px 0,transparent 5px,#fffcef 5.5px) 0 0/10px 9px}
+.receipt:before{top:-9px;transform:rotate(180deg)}
+.receipt:after{bottom:-9px}
+.receipt-heading,.receipt-total{display:flex;justify-content:space-between;gap:10px;font-size:8px;font-weight:900;letter-spacing:.4px}
+.receipt-heading{padding-bottom:13px;border-bottom:2px dashed #2434504a;margin-bottom:16px}
+.receipt .mission>.kicker{color:#d3442e}
+.receipt .level-selector{padding:12px 0;border-top:1px dashed #24345045;border-bottom:1px dashed #24345045;margin-top:15px}
+.receipt-total{padding:13px 0 19px;font-size:7px}
+.receipt .primary{border-radius:9px;background:#ff6545;box-shadow:0 4px 0 #862f31}
+
+/* A greenhouse arch, open space and a flower trail. */
+#menu.garden-menu{max-width:770px;left:calc(50% - 385px);right:calc(50% - 385px);grid-template-columns:1fr 1fr;column-gap:38px;text-align:center}
+.garden-heading{grid-column:1/-1;margin-bottom:8px}
+.garden-heading h1{color:#5135b0}
+.garden-heading .kicker{color:#6846bb}
+.garden-display{grid-row:2/4;position:relative;align-self:center}
+.garden-display .garden-arch{height:350px;border-radius:50% 50% 23px 23px;border:3px solid #fff6e0;box-shadow:0 8px 0 #846ac436;background:#dbd4ff}
+.garden-spark{position:absolute;z-index:2;color:#6546db;font-size:36px;pointer-events:none}
+.spark-one{left:-8px;top:65px;transform:rotate(-15deg)}
+.spark-two{right:5px;bottom:66px;color:#fff5d6;font-size:52px}
+.garden-message{font-size:8px;font-weight:900;letter-spacing:2px;margin-top:18px;color:#6846bb}
+.garden-trail{align-self:end;padding:25px 0 18px}
+.garden-trail .round-button{background:#fff5dd;border-radius:50% 50% 10px 50%;color:#5135b0}
+.garden-trail .selected-level{background:#fff8e5;border-radius:50%;min-width:125px;min-height:93px;border:2px solid #b79fef}
+.garden-invitation{padding-top:0}
+.garden-invitation .mission{margin-bottom:24px}
+.garden-invitation .primary{width:100%;max-width:280px;margin:0 auto;border-radius:32px;justify-content:center;gap:15px;box-shadow:0 5px 0 #5135b0;background:#6546db;color:#fff9e9}
+
+/* A rescue dossier with an off-center taped agent photograph. */
+#menu.heist-menu{max-width:900px;left:calc(50% - 450px);right:calc(50% - 450px)}
+.case-folder{position:relative;background:#fff4d6;border:2px solid #243450;border-radius:0 25px 25px 25px;padding:27px 32px 25px;box-shadow:8px 9px 0 #145f5340;margin-top:24px}
+.case-tab{position:absolute;top:-26px;left:-2px;height:26px;background:#fff4d6;border:2px solid #243450;border-bottom:0;border-radius:13px 13px 0 0;padding:8px 18px 0;font-size:8px;font-weight:900;letter-spacing:1px}
+.heist-board{display:grid;grid-template-columns:1fr 230px;gap:17px 35px;align-items:center}
+.brief-heading h1{max-width:300px;font-size:55px;color:#155a50}
+.brief-heading .kicker{font-size:8px;color:#155a50}
+.case-stamp{display:inline-block;margin-top:17px;padding:8px 14px;border:2px solid #dd653e;color:#cc5633;font-size:9px;line-height:1.2;font-weight:900;transform:rotate(-7deg)}
+.mugshot{position:relative;background:#fffdf0;padding:9px 9px 27px;transform:rotate(5deg);box-shadow:4px 5px 0 #24345025;grid-row:1/3;grid-column:2}
+.mugshot .agent-photo{height:235px;background:#bdede0}
+.mugshot>b{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:2px}
+.photo-tape{position:absolute;top:-11px;left:27%;width:48%;height:25px;background:#ffc957b5;transform:rotate(-8deg);box-shadow:0 1px 0 #e4a74050}
+.mission-brief{border-top:2px dotted #24345050;padding-top:14px}
+.mission-brief .mission h2{font-size:25px}
+.mission-brief .best-stars{font-size:8px;color:#155a50}
+.evidence-strip{grid-column:1/-1;display:flex;gap:8px;justify-content:space-between;border-top:2px dashed #24345037;border-bottom:2px dashed #24345037;padding:12px 0}
+.evidence-strip>span{display:flex;align-items:center;gap:10px;font-size:8px;font-weight:900}
+.evidence-strip svg{width:31px;height:31px;fill:#ffc138;stroke:#243450;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.operation-picker{margin:12px 0 17px}
+.operation-picker .selected-level{background:#d5eada;border:1px solid #155a5033;min-width:176px;border-radius:7px}
+.case-folder .primary{border-radius:8px;background:#155a50;color:#fff8dc;box-shadow:0 5px 0 #093b35}
+
+/* A full-bleed starting grid and race console. */
+#app[data-mode="3"][data-screen="menu"]{background:#243450}
+#app[data-mode="3"][data-screen="menu"] .nav{color:#fff8e8}
+#app[data-mode="3"][data-screen="menu"] .nav .round-button{color:#243450}
+#app[data-mode="3"][data-screen="menu"] .logo-mark{background:#ffbc24;color:#243450;box-shadow:3px 3px 0 #fff7df}
+#menu.race-menu{max-width:1080px;left:calc(50% - 540px);right:calc(50% - 540px);overflow-x:hidden}
+.race-poster{position:relative;min-height:350px;border-radius:25px;overflow:hidden;background:#243450}
+.race-poster .pit-stage{position:absolute;inset:0;height:100%}
+.race-heading{position:absolute;top:20px;left:24px;z-index:2;max-width:450px;pointer-events:none}
+.race-heading h1{font-size:70px;line-height:.9;text-transform:uppercase;font-style:italic;color:#ffbc24;letter-spacing:-3px;text-shadow:4px 4px 0 #243450}
+.race-heading .kicker{font-size:8px;color:#fff8e8}
+.race-heading>p{color:#fff8e8!important;margin-top:13px}
+.race-checker{position:absolute;right:0;top:0;width:93px;height:93px;background:repeating-conic-gradient(#fff8e8 0 25%,#243450 0 50%) 0 0/23px 23px;z-index:2;transform:rotate(10deg) translate(7px,-10px);border:3px solid #ffbc24}
+.race-number{position:absolute;left:28px;bottom:19px;color:#fff8e826;font-size:110px;line-height:1;font-weight:900;font-style:italic;pointer-events:none}
+.race-callout{position:absolute;right:22px;bottom:24px;z-index:2;display:flex;flex-direction:column;gap:5px;font-size:12px;color:#fff8e8;text-align:right;letter-spacing:.8px}
+.race-callout span{color:#ffbc24;font-size:10px;font-weight:900}
+.race-poster .art-caption{display:none}
+.race-console{position:relative;background:#fff6dc;border-radius:15px;padding:20px 25px;margin-top:-8px;z-index:3}
+.race-plan{display:grid;grid-template-columns:1fr 290px;align-items:center;gap:15px;margin-bottom:17px}
+.race-plan .selected-level{border-left:2px solid #243450;border-right:2px solid #243450;border-radius:0;min-width:141px}
+.race-plan .selected-level strong{font-size:33px;font-style:italic}
+.race-console .primary{border-radius:8px;background:#ffbc24;color:#243450;box-shadow:0 5px 0 #243450;font-size:15px}
+.race-menu .start-footer{color:#fff8e8}
+.race-menu .start-help .help{color:#fff8e8}
+
+/* A festival poster, tilted title, fruit stage and torn admission ticket. */
+#menu.party-menu{max-width:890px;left:calc(50% - 445px);right:calc(50% - 445px);grid-template-columns:1fr .9fr;column-gap:32px}
+.party-heading{grid-column:1/-1;position:relative;text-align:center;margin:0 0 15px;transform:rotate(-2deg)}
+.party-heading h1{font-size:64px;color:#bd2d71;letter-spacing:-2px;text-shadow:3px 4px 0 #fff5db}
+.party-heading .kicker{font-size:9px;letter-spacing:2px;color:#9b245b}
+.party-confetti{position:absolute;font-size:46px;color:#ffae25}
+.confetti-one{left:10%;top:23px;transform:rotate(15deg)}
+.confetti-two{right:8%;top:5px;color:#397ee7;font-size:35px;transform:rotate(-10deg)}
+.party-display{grid-row:2/4;position:relative;align-self:center;margin:12px 0 0}
+.party-display .fruit-stage{height:315px;border-radius:50%;border:4px solid #fff8df;background:#ffd0e3;box-shadow:0 7px 0 #be4f7c26}
+.party-sticker{position:absolute;right:-3px;top:4px;background:#ffbf2f;border:2px solid #243450;border-radius:50%;height:89px;width:89px;display:grid;place-content:center;text-align:center;font-size:11px;font-weight:900;line-height:1.2;transform:rotate(11deg);box-shadow:3px 3px 0 #243450}
+.party-loop{position:absolute;width:21px;height:21px;border:5px solid #397ee7;border-radius:50%;z-index:2}
+.loop-one{left:13px;bottom:55px}
+.loop-two{right:23px;bottom:25px;border-color:#ffbf2f;width:30px;height:30px}
+.party-ticket{position:relative;background:#fff6d8;border-top:2px dashed #c4812f;border-bottom:2px dashed #c4812f;padding:15px 18px 20px;align-self:end;margin-top:10px}
+.party-ticket:before,.party-ticket:after{content:'';position:absolute;top:48%;width:21px;height:21px;background:#ffd0e3;border-radius:50%}
+.party-ticket:before{left:-11px}
+.party-ticket:after{right:-11px}
+.ticket-edge{display:block;font-size:7px;font-weight:900;letter-spacing:1.3px;text-align:center;margin-bottom:8px;color:#9b245b}
+.party-ticket .level-selector{padding-bottom:12px;border-bottom:1px dashed #c4812f;margin-bottom:15px}
+.party-ticket .selected-level{border-radius:0;padding:7px 10px;min-width:145px}
+.party-ticket .mission{text-align:center}
+.party-ticket .mission>.kicker{color:#9b245b;font-size:7px}
+.party-launch{padding:18px 0 0}
+.party-launch .primary{border-radius:24px;background:#397ee7;color:#fff9df;box-shadow:0 5px 0 #243450;justify-content:center;gap:20px}
+
+/* The level picker inherits each game's own visual language. */
+#app[data-mode="0"] .route-modal{border-radius:9px;border:2px dashed #d78864;background:#fffcef}
+#app[data-mode="0"] .level-grid button{border-radius:6px;border:1px dashed #d78864;background:#fff3df}
+#app[data-mode="1"] .route-modal{border-radius:45px 45px 22px 22px;background:#eee7ff}
+#app[data-mode="1"] .level-grid{grid-template-columns:repeat(3,1fr);gap:11px}
+#app[data-mode="1"] .level-grid button{border-radius:50% 50% 13px 50%;min-height:63px;background:#fff7dd}
+#app[data-mode="2"] .route-modal{border:2px solid #155a50;border-radius:6px 24px 24px 24px;background:#fff4d6}
+#app[data-mode="2"] .level-grid{grid-template-columns:repeat(3,1fr)}
+#app[data-mode="2"] .level-grid button{border-radius:5px;border:1px solid #155a5033;background:#d5eada}
+#app[data-mode="3"] .route-modal{background:#243450;color:#fff8df;border-radius:13px;border:2px solid #ffbc24}
+#app[data-mode="3"] .route-modal p{color:#fff8dfb0}
+#app[data-mode="3"] .level-grid button{border-radius:3px;background:#fff6dc;color:#243450;border-left:5px solid #ffbc24}
+#app[data-mode="3"] .level-grid b{font-size:26px;font-style:italic}
+#app[data-mode="4"] .route-modal{background:#fff3d7;border:3px solid #eb4c95;border-radius:31px}
+#app[data-mode="4"] .level-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+#app[data-mode="4"] .level-grid button{border-radius:22px;border:1px dashed #a76c3e;min-height:59px}
+#app .level-grid button.selected{background:var(--accent);color:var(--button-text);border-color:var(--ink)}
+#app[data-mode="2"] .hud .objective{background:#155a50;color:#fff8df;border-radius:8px}
+#app[data-mode="3"] .hud .objective{border-radius:7px;border-left:5px solid #ffbc24}
+#app[data-mode="3"] .hud .clock{border-radius:6px;font-style:italic}
+#app[data-mode="4"] .hud .objective{border-radius:24px;border:2px dashed #eb4c95}
+
+@media(max-width:700px){
+ #menu.start-screen{inset:calc(66px + env(safe-area-inset-top)) 18px calc(8px + env(safe-area-inset-bottom));max-width:none;margin:0;display:flex;flex-direction:column;overflow-x:hidden;overflow-y:auto}
+ .start-screen h1{font-size:36px;letter-spacing:-1.4px;margin:6px 0}
+ .start-screen header>p{font-size:11px}
+ .start-screen .kicker{font-size:8px;letter-spacing:1px}
+ .start-screen .mission h2{font-size:21px;margin:5px 0}
+ .start-screen .mission p{font-size:11px}
+ .start-screen .best-stars{font-size:8px;margin-top:5px;display:block}
+ .start-screen .primary{min-height:52px;font-size:12px;flex:none}
+ .start-screen .art-caption{font-size:7px;bottom:9px}
+ .start-footer{padding:10px 0 0;gap:20px;flex:none}
+ .start-footer .text-link{font-size:7px}
+ .start-help summary{font-size:8px}
+ .bento-brand{padding:0 81px 12px 0;margin-bottom:12px}
+ .bento-brand h1{font-size:34px}
+ .open-stamp{width:65px;height:65px;font-size:8px;right:3px}
+ .bento-display{align-self:stretch;min-width:0;padding:10px;border-radius:22px 22px 8px 8px;margin:0 0 21px;flex:none}
+ .bento-display .kitchen-window{height:190px;border-radius:17px}
+ .restaurant-sign{left:32px;right:32px;padding:7px 4px;font-size:7px;bottom:-7px}
+ .receipt{align-self:stretch;min-width:0;padding:14px 18px 16px;margin:0 5px 10px;transform:rotate(.7deg);flex:none}
+ .receipt-heading{padding-bottom:9px;margin-bottom:11px;font-size:7px}
+ .receipt .mission>.kicker{font-size:7px}
+ .receipt .level-selector{padding:8px 0;margin-top:10px}
+ .receipt .selected-level{min-width:127px;padding:5px 11px}
+ .receipt .selected-level strong{font-size:23px}
+ .receipt-total{font-size:6px;padding:10px 0 14px}
+ .garden-heading{margin:3px 0 9px;text-align:center}
+ .garden-heading h1{font-size:38px}
+ .garden-heading .kicker{font-size:7px}
+ .garden-display{align-self:stretch;min-width:0;margin:0 20px;flex:none}
+ .garden-display .garden-arch{height:238px;max-width:290px;margin:auto}
+ .garden-message{margin:13px 0 0;font-size:7px;letter-spacing:1.7px}
+ .garden-trail{padding:14px 0 12px;align-self:center}
+ .garden-trail .selected-level{min-height:76px;min-width:122px;padding:8px 12px}
+ .garden-trail .selected-level strong{font-size:26px}
+ .garden-invitation{text-align:center}
+ .garden-invitation .mission{margin-bottom:18px}
+ .garden-invitation .mission>.kicker{font-size:7px}
+ .garden-invitation .primary{width:90%;max-width:285px;min-height:53px}
+ .garden-spark{font-size:31px}
+ .spark-one{top:35px}
+ .spark-two{right:-7px;bottom:43px;font-size:39px}
+ .case-folder{padding:18px 17px 21px;margin:27px 5px 0 0;box-shadow:5px 6px 0 #145f5340;border-radius:0 20px 20px 20px;flex:none}
+ .case-tab{font-size:6px;letter-spacing:.5px;padding-left:13px;padding-right:13px}
+ .heist-board{grid-template-columns:1fr 43%;gap:17px 12px}
+ .brief-heading h1{font-size:37px;max-width:180px;letter-spacing:-1.6px}
+ .brief-heading .kicker{font-size:6px;letter-spacing:.8px;line-height:1.5;display:block}
+ .brief-heading>p{font-size:10px}
+ .case-stamp{font-size:7px;margin-top:14px;padding:7px 9px}
+ .mugshot{padding:6px 6px 24px;grid-row:1;grid-column:2;transform:rotate(4deg)}
+ .mugshot .agent-photo{height:175px}
+ .mugshot>b{font-size:7px;letter-spacing:1.3px}
+ .photo-tape{height:18px;top:-8px}
+ .mission-brief{grid-column:1/-1;padding-top:11px}
+ .mission-brief .mission h2{font-size:22px}
+ .evidence-strip{padding:10px 0;gap:5px}
+ .evidence-strip>span{flex:1;flex-direction:column;gap:6px;text-align:center;font-size:6px;line-height:1.3}
+ .evidence-strip svg{width:26px;height:26px}
+ .operation-picker{margin:12px 0 18px}
+ .operation-picker .selected-level{min-width:159px;padding:8px 12px}
+ .case-folder .primary{font-size:12px}
+ #menu.race-menu{left:14px;right:14px}
+ .race-poster{min-height:315px;flex:none;border-radius:18px}
+ .race-heading{top:12px;left:8px;max-width:290px}
+ .race-heading h1{font-size:53px;letter-spacing:-2.5px;max-width:245px;margin:11px 0 0}
+ .race-heading .kicker{font-size:6px;letter-spacing:.8px;max-width:235px;display:block}
+ .race-heading>p{display:none}
+ .race-checker{width:64px;height:64px;background-size:16px 16px;right:-5px;top:-5px}
+ .race-callout{bottom:11px;right:12px;font-size:9px;letter-spacing:.4px}
+ .race-callout span{font-size:8px}
+ .race-number{font-size:86px;bottom:5px;left:8px}
+ .race-console{padding:16px 17px 20px;border-radius:12px;margin-top:-3px;flex:none}
+ .race-plan{grid-template-columns:1fr 145px;gap:9px;margin-bottom:17px}
+ .race-plan .mission h2{font-size:21px}
+ .race-plan .mission>.kicker{font-size:7px}
+ .race-plan .mission p{font-size:10px}
+ .race-plan .best-stars{display:none}
+ .race-plan .level-selector{gap:4px;flex-wrap:wrap;justify-content:center}
+ .race-plan .selected-level{order:-1;width:100%;min-width:0;padding:5px 9px}
+ .race-plan .selected-level strong{font-size:31px}
+ .race-plan .round-button{height:44px;width:44px;min-width:44px;border-radius:7px;background:#ffdb73}
+ .race-console .primary{font-size:12px}
+ .party-heading{margin:6px 0 13px;flex:none}
+ .party-heading h1{font-size:47px;letter-spacing:-2px}
+ .party-heading .kicker{font-size:7px;letter-spacing:1.5px}
+ .party-heading>p{font-size:11px}
+ .party-confetti{font-size:31px;top:15px}
+ .confetti-one{left:0}
+ .confetti-two{right:0;top:2px;font-size:25px}
+ .party-display{align-self:stretch;min-width:0;margin:0 24px 18px;flex:none}
+ .party-display .fruit-stage{height:225px;border-width:3px}
+ .party-sticker{height:71px;width:71px;font-size:9px;right:-16px;top:9px;box-shadow:2px 2px 0 #243450}
+ .party-ticket{align-self:stretch;min-width:0;margin:0 8px;flex:none;padding:11px 17px 15px}
+ .ticket-edge{font-size:6px;letter-spacing:.9px;margin-bottom:5px}
+ .party-ticket .level-selector{padding-bottom:9px;margin-bottom:10px;gap:9px}
+ .party-ticket .selected-level{min-width:140px;padding:5px 8px}
+ .party-ticket .selected-level strong{font-size:25px}
+ .party-ticket .mission h2{font-size:20px}
+ .party-ticket .mission>.kicker{font-size:6px}
+ .party-ticket .best-stars{display:none}
+ .party-launch{padding:18px 9px 0;flex:none}
+ .party-launch .primary{border-radius:23px}
+ .party-loop{width:16px;height:16px;border-width:4px}
+ .loop-one{left:-7px;bottom:34px}
+ .loop-two{right:4px;bottom:12px;width:23px;height:23px}
+}
+@media(max-height:680px) and (max-width:700px){
+ #menu.start-screen{top:calc(61px + env(safe-area-inset-top));bottom:calc(6px + env(safe-area-inset-bottom));left:14px;right:14px}
+ .start-screen h1{font-size:29px;margin:5px 0}
+ .start-screen header>p{font-size:10px}
+ .start-screen .primary{min-height:47px;font-size:11px}
+ .start-screen .best-stars{display:none}
+ .start-screen .mission h2{font-size:18px;margin:4px 0}
+ .start-screen .mission p{font-size:10px}
+ .start-footer{padding-top:6px;gap:18px}
+ .bento-brand{padding-bottom:9px;margin-bottom:8px;padding-right:65px}
+ .open-stamp{height:55px;width:55px;font-size:7px}
+ .bento-display{padding:8px;margin-bottom:17px}
+ .bento-display .kitchen-window{height:123px}
+ .restaurant-sign{font-size:6px;padding:5px}
+ .receipt{padding:11px 15px 13px;margin-bottom:7px}
+ .receipt-heading{padding-bottom:6px;margin-bottom:8px}
+ .receipt .level-selector{margin-top:8px;padding:5px 0;gap:8px}
+ .receipt-total{padding:7px 0 10px;font-size:5px}
+ .receipt .selected-level{padding:3px 9px}
+ .receipt .selected-level strong{font-size:21px}
+ .garden-heading{margin:2px 0 7px}
+ .garden-heading h1{font-size:33px}
+ .garden-display{margin:0 34px}
+ .garden-display .garden-arch{height:160px}
+ .garden-message{margin-top:8px;font-size:6px}
+ .garden-trail{padding:10px 0}
+ .garden-trail .selected-level{min-height:64px;min-width:115px;padding:6px 10px}
+ .garden-trail .selected-level strong{font-size:23px}
+ .garden-invitation .mission{margin-bottom:12px}
+ .garden-invitation .primary{min-height:47px}
+ .case-folder{padding:12px 13px 15px;margin-top:25px}
+ .heist-board{gap:11px 10px}
+ .brief-heading h1{font-size:31px}
+ .brief-heading .kicker{font-size:5px}
+ .case-stamp{font-size:6px;padding:5px 7px;margin-top:9px}
+ .mugshot .agent-photo{height:130px}
+ .mugshot>b{font-size:6px}
+ .mission-brief{padding-top:8px}
+ .evidence-strip{padding:8px 0;gap:4px}
+ .evidence-strip>span{font-size:5px;gap:4px}
+ .evidence-strip svg{height:23px;width:23px}
+ .operation-picker{margin:8px 0 12px}
+ .operation-picker .selected-level{padding:6px 10px}
+ .operation-picker .selected-level strong{font-size:23px}
+ .race-poster{min-height:220px}
+ .race-heading h1{font-size:44px;max-width:210px}
+ .race-heading>p{margin-top:8px;font-size:9px}
+ .race-callout{font-size:8px}
+ .race-callout span{font-size:7px}
+ .race-number{font-size:65px}
+ .race-console{padding:12px 13px 16px}
+ .race-plan{grid-template-columns:1fr 128px;gap:7px;margin-bottom:13px}
+ .race-plan .selected-level strong{font-size:26px}
+ .race-plan .selected-level small{font-size:6px}
+ .race-plan .level-selector{gap:3px}
+ .party-heading{margin:3px 0 9px}
+ .party-heading h1{font-size:39px}
+ .party-heading .kicker{font-size:6px}
+ .party-display{margin:0 32px 12px}
+ .party-display .fruit-stage{height:146px}
+ .party-sticker{height:58px;width:58px;font-size:7px;top:3px}
+ .party-ticket{padding:9px 13px 11px;margin:0 6px}
+ .party-ticket .level-selector{padding-bottom:6px;margin-bottom:7px;gap:7px}
+ .party-ticket .selected-level{min-width:130px;padding:3px 8px}
+ .party-ticket .selected-level strong{font-size:23px}
+ .party-launch{padding-top:13px}
+}
+@media(max-height:450px) and (min-width:600px){
+ #menu.start-screen{inset:calc(62px + env(safe-area-inset-top)) 22px calc(8px + env(safe-area-inset-bottom));max-width:none;display:grid;overflow-y:auto;column-gap:24px}
+ .start-screen h1{font-size:31px;letter-spacing:-1px}
+ .start-screen header>p{font-size:10px}
+ .start-screen .mission h2{font-size:19px}
+ .start-screen .mission p{font-size:10px}
+ .start-screen .primary{min-height:47px;font-size:11px}
+ .start-screen .best-stars{display:none}
+ .start-footer{padding-top:5px}
+ #menu.bento-menu{grid-template-columns:1.1fr .9fr}
+ .bento-brand{grid-column:1;padding:0 70px 9px 0;margin-bottom:0}
+ .open-stamp{width:56px;height:56px;font-size:7px}
+ .bento-display{grid-column:1;padding:9px;margin-top:9px;grid-row:2}
+ .bento-display .kitchen-window{height:143px}
+ .restaurant-sign{bottom:-5px;padding:5px;font-size:6px}
+ .receipt{grid-column:2;grid-row:1/3;padding:12px 17px 15px;margin:8px 0 0}
+ .receipt-heading{padding-bottom:7px;margin-bottom:10px}
+ .receipt .level-selector{margin-top:10px;padding:6px 0}
+ .receipt-total{padding:9px 0 13px;font-size:6px}
+ #menu.garden-menu{grid-template-columns:1fr 1fr}
+ .garden-heading{grid-column:2;grid-row:1;margin:0}
+ .garden-heading h1{font-size:32px}
+ .garden-display{grid-column:1;grid-row:1/4;margin:5px 25px 0}
+ .garden-display .garden-arch{height:218px}
+ .garden-message{font-size:6px;margin-top:11px}
+ .garden-trail{grid-column:2;grid-row:2;padding:10px 0}
+ .garden-trail .selected-level{min-height:64px}
+ .garden-invitation{grid-column:2;grid-row:3}
+ .garden-invitation .mission{margin-bottom:12px}
+ .garden-invitation .mission>.kicker{display:none}
+ .garden-invitation .primary{min-height:47px}
+ #menu.heist-menu{grid-template-columns:1fr}
+ .case-folder{margin-top:24px;padding:12px 20px 17px}
+ .heist-board{grid-template-columns:1fr 155px 1.1fr;gap:9px 20px}
+ .brief-heading h1{font-size:34px}
+ .brief-heading .kicker{font-size:6px}
+ .case-stamp{font-size:7px;margin-top:10px;padding:5px 8px}
+ .mugshot{grid-column:2;grid-row:1/3;padding:6px 6px 23px}
+ .mugshot .agent-photo{height:125px}
+ .mugshot>b{font-size:7px}
+ .mission-brief{grid-column:3;grid-row:1;padding-top:9px}
+ .evidence-strip{grid-column:3;grid-row:2;padding:9px 0;gap:8px}
+ .evidence-strip>span{font-size:6px;flex-direction:column;gap:5px}
+ .evidence-strip svg{width:23px;height:23px}
+ .operation-picker{position:absolute;left:20px;bottom:15px;width:calc(50% - 28px);margin:0}
+ .operation-picker .selected-level{min-width:125px;padding:5px 10px}
+ .operation-picker .selected-level strong{font-size:22px}
+ .case-folder>.primary{margin-left:53%;width:47%;margin-top:14px}
+ #menu.race-menu{grid-template-columns:1.15fr .85fr;gap:18px}
+ .race-poster{min-height:252px;grid-column:1;grid-row:1}
+ .race-heading{top:12px;left:13px}
+ .race-heading h1{font-size:48px;max-width:275px}
+ .race-heading .kicker{font-size:6px}
+ .race-heading>p{font-size:10px;max-width:260px}
+ .race-callout{font-size:9px;bottom:12px;right:12px}
+ .race-callout span{font-size:8px}
+ .race-number{font-size:65px;bottom:9px;left:12px}
+ .race-checker{width:55px;height:55px;background-size:14px 14px}
+ .race-console{grid-column:2;grid-row:1;margin:0;padding:17px 18px;align-self:center}
+ .race-plan{display:flex;flex-direction:column;align-items:stretch;gap:13px;margin-bottom:15px}
+ .race-plan .level-selector{display:flex;flex-wrap:nowrap;gap:8px}
+ .race-plan .selected-level{order:0;min-width:130px;padding:6px 10px;width:auto}
+ .race-plan .selected-level strong{font-size:26px}
+ #menu.party-menu{grid-template-columns:1fr 1fr;gap:0 20px}
+ .party-heading{grid-column:1;grid-row:1;margin:2px 0 7px}
+ .party-heading h1{font-size:38px}
+ .party-heading .kicker{font-size:7px}
+ .party-confetti{font-size:25px}
+ .party-display{grid-column:1;grid-row:2/4;margin:0 34px 0}
+ .party-display .fruit-stage{height:162px}
+ .party-sticker{width:65px;height:65px;font-size:8px;top:3px;right:-23px}
+ .party-ticket{grid-column:2;grid-row:1/3;margin-top:9px;padding:12px 16px 15px}
+ .party-ticket .selected-level{min-width:145px}
+ .party-ticket .level-selector{padding-bottom:9px;margin-bottom:10px}
+ .party-launch{grid-column:2;grid-row:3;padding-top:15px}
+}
+@media(prefers-reduced-motion:no-preference){
+ #app[data-screen="menu"] .garden-spark,#app[data-screen="menu"] .party-confetti{animation:start-float 3.2s ease-in-out infinite alternate}
+ @keyframes start-float{to{translate:0 -6px;rotate:8deg}}
+}
+
+#app[data-mode="0"] .logo-mark{background:#e85238;color:#fff9df}
+#app[data-mode="1"] .logo-mark{background:#6546db;letter-spacing:0;padding-right:0}
+#app[data-mode="2"] .logo-mark{background:#155a50}
+#app[data-mode="3"] .logo-mark{font-size:20px;letter-spacing:-1px;padding-right:0;font-style:italic}
+#app[data-mode="4"] .logo-mark{background:#bd2d71}
+@media(min-width:701px) and (min-height:451px){
+ .case-folder{padding-top:21px}
+ .heist-board{row-gap:12px}
+ .operation-picker{margin:9px 0 13px}
+}

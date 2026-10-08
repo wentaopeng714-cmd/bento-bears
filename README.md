@@ -1,8 +1,8 @@
 # Bento Bears
 
-Bento Bears (熊猫便当店) is a standalone Toybox Arcade game with brighter rounded 3D toy art, a redesigned character, English UI, mobile controls and 15 evolving stages. Version 1.0.2.
+Bento Bears (熊猫便当店) is a standalone Toybox Arcade game with brighter rounded 3D toy art, a redesigned character, English UI, mobile controls and 15 evolving stages. Version 1.1.0.
 
-**[Play online](https://wentaopeng714-cmd.github.io/bento-bears/) · [Download the complete ZIP](https://github.com/wentaopeng714-cmd/bento-bears/releases/download/v1.0.2/bento-bears-v1.0.2.zip)**
+**[Play online](https://wentaopeng714-cmd.github.io/bento-bears/) · [Download the complete ZIP](https://github.com/wentaopeng714-cmd/bento-bears/releases/download/v1.1.0/bento-bears-v1.1.0.zip)**
 
 ![Game preview](previews/bento-bears-play.png)
 
@@ -25,6 +25,14 @@ Procedural rounded models preserve the miniature toy style and elevated view. Mo
 Coral, violet, turquoise, yellow and hot pink create stronger separation against cream and navy. Each game has its own dominant color. Character galleries, mission cards, a separate level picker, compact HUD, contextual cooking actions and large touch controls replace the previous centered level-grid layout.
 
 Distance-based walking, ground contact, acceleration lean, spring reactions, blinking, accessory follow-through, cart drift trails, turbo particles, cooking steam, mirror turns, blooming flowers, following rescued ducks and fruit landing rings provide action feedback. Synthesized audio starts after interaction and can be muted. Models are generated locally in code; Three.js is bundled under the MIT license in `THREE-LICENSE.txt`.
+
+## Five entrances, five compositions
+
+The start screens now use separate HTML structures and visual hierarchies. Bento Bears has a restaurant window and perforated order receipt; Prism Garden uses a greenhouse arch and flower trail; Pocket Heist is a rescue dossier with a taped agent photograph; Dino Drift is a dark starting-grid poster and race console; Peach Party is a festival poster with an admission ticket. Each has its own club mark, start action, stage picker, chapter labels and pause copy.
+
+The animated 3D previews also change by game: cooking counter, prism island, rescue crate and cage, kart pit lane, or fruit festival. The rounded toy characters, elevated view and phone controls are preserved. `src/starts.js` authors the five entry structures; `starts.css` provides their independent phone, landscape and desktop compositions. Preview PNGs for this game are in `previews/`.
+
+Browser checks cover 25 start layouts across 320 × 568, 390 × 844, 430 × 932, 844 × 390 and 1280 × 720. Start buttons fit inside the visible screen and touch targets are at least 44 px. All five stage pickers, stage 15 navigation, start, pause and return were exercised through the browser.
 
 ## Phone layout update
 
