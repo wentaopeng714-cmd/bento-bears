@@ -1,8 +1,8 @@
 # Bento Bears
 
-Bento Bears (熊猫便当店) is a standalone Toybox Arcade game with brighter rounded 3D toy art, a redesigned character, English UI, mobile controls and 15 evolving stages. Version 1.0.1.
+Bento Bears (熊猫便当店) is a standalone Toybox Arcade game with brighter rounded 3D toy art, a redesigned character, English UI, mobile controls and 15 evolving stages. Version 1.0.2.
 
-**[Play online](https://wentaopeng714-cmd.github.io/bento-bears/) · [Download the complete ZIP](https://github.com/wentaopeng714-cmd/bento-bears/releases/download/v1.0.1/bento-bears-v1.0.1.zip)**
+**[Play online](https://wentaopeng714-cmd.github.io/bento-bears/) · [Download the complete ZIP](https://github.com/wentaopeng714-cmd/bento-bears/releases/download/v1.0.2/bento-bears-v1.0.2.zip)**
 
 ![Game preview](previews/bento-bears-play.png)
 
@@ -25,6 +25,14 @@ Procedural rounded models preserve the miniature toy style and elevated view. Mo
 Coral, violet, turquoise, yellow and hot pink create stronger separation against cream and navy. Each game has its own dominant color. Character galleries, mission cards, a separate level picker, compact HUD, contextual cooking actions and large touch controls replace the previous centered level-grid layout.
 
 Distance-based walking, ground contact, acceleration lean, spring reactions, blinking, accessory follow-through, cart drift trails, turbo particles, cooking steam, mirror turns, blooming flowers, following rescued ducks and fruit landing rings provide action feedback. Synthesized audio starts after interaction and can be muted. Models are generated locally in code; Three.js is bundled under the MIT license in `THREE-LICENSE.txt`.
+
+## Phone layout update
+
+Portrait and landscape layouts reserve a separate space for the playable world, so the HUD and controls never cover it. The reserved space follows actual content height, including multiple cooking orders. Controls support display safe areas. Movement and action have independent pointer capture; rotation clears held input.
+
+Phone joysticks are 98–112 px and primary actions are 92–106 px. Auxiliary controls and retry/pause have at least 44 px touch targets. Light puzzles use direct mirror taps with a 28 px nearest-target fallback and omit the movement stick on phones. Small-screen cameras move closer; phone render resolution is capped at 1.25 device pixels per CSS pixel.
+
+Browser layout checks cover all five games at 320 × 568, 390 × 844, 430 × 932 and 844 × 390. Portrait and landscape starts are visible without scrolling; mobile pointer clicks clear a light puzzle, and movement release and pause clear input. These are browser viewport checks, not physical-device performance measurements.
 
 ## Development and verification
 
