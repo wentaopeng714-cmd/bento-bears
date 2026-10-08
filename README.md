@@ -1,8 +1,8 @@
 # Bento Bears
 
-Bento Bears (熊猫便当店) is a standalone Toybox Arcade game with brighter rounded 3D toy art, a redesigned character, English UI, mobile controls and 15 evolving stages. Version 1.0.0.
+Bento Bears (熊猫便当店) is a standalone Toybox Arcade game with brighter rounded 3D toy art, a redesigned character, English UI, mobile controls and 15 evolving stages. Version 1.0.1.
 
-**[Play online](https://wentaopeng714-cmd.github.io/bento-bears/) · [Download the complete ZIP](https://github.com/wentaopeng714-cmd/bento-bears/releases/download/v1.0.0/bento-bears-v1.0.0.zip)**
+**[Play online](https://wentaopeng714-cmd.github.io/bento-bears/) · [Download the complete ZIP](https://github.com/wentaopeng714-cmd/bento-bears/releases/download/v1.0.1/bento-bears-v1.0.1.zip)**
 
 ![Game preview](previews/bento-bears-play.png)
 
